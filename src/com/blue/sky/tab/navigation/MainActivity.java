@@ -1,6 +1,7 @@
 package com.blue.sky.tab.navigation;
 
 import android.annotation.SuppressLint;
+import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -17,7 +18,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
+import com.blue.sky.tab.fragment.FragmentFactory;
 import com.blue.sky.tab.navigation.entity.NavDrawerItem;
 import com.blue.sky.tab.navigation.adapter.NavDrawerListAdapter;
 import com.blue.sky.tab.navigation.fragment.*;
@@ -36,14 +39,29 @@ public class MainActivity extends FragmentActivity implements OnItemClickListene
 	private TypedArray mNavMenuIconsTypeArray;
 	private NavDrawerListAdapter mAdapter;
 	private ActionBarDrawerToggle mDrawerToggle;
-	
+
+    private android.app.FragmentManager fragmentManager;
+    private RadioGroup radioGroup;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.navigation_main);
-		
+
+        fragmentManager = getFragmentManager();
+        radioGroup = (RadioGroup) findViewById(R.id.rg_tab);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                android.app.Fragment fragment = FragmentFactory.getInstanceByIndex(checkedId);
+                transaction.replace(R.id.content_frame, fragment);
+                transaction.commit();
+            }
+        });
+
 		findView();
-		
+
 		if (savedInstanceState == null) {
 	        selectItem(0);
 	    }
