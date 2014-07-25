@@ -1,6 +1,8 @@
 package com.blue.sky.tab.fragment;
 
 import android.app.Fragment;
+import com.blue.sky.code.home.HomeFragment;
+import com.blue.sky.component.R;
 
 /**
  * Created by admin on 13-11-23.
@@ -9,19 +11,19 @@ public class FragmentFactory {
     public static Fragment getInstanceByIndex(int index) {
         Fragment fragment = null;
         switch (index) {
-            case 1:
-                fragment = new AttentionFragment();
+            case R.id.tab_home:
+                fragment = new HomeFragment();
                 break;
-            case 2:
+            case R.id.tab_code:
                 fragment = new AtmeFragment();
                 break;
-            case 3:
+            case R.id.tab_mobile:
                 fragment = new CommentFragment();
                 break;
-            case 4:
+            case R.id.tab_web:
                 fragment = new MyListFragment();
                 break;
-            case 5:
+            case R.id.tab_blog:
                 fragment = new GlobalFragment();
                 break;
         }

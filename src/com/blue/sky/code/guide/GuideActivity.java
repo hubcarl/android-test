@@ -1,4 +1,4 @@
-package com.blue.sky.common.activity;
+package com.blue.sky.code.guide;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,12 +13,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-import com.blue.sky.component.R;
+import com.blue.sky.code.MainActivity;
 import com.blue.sky.common.utils.NetWorkHelper;
+import com.blue.sky.component.R;
 import com.blue.sky.control.CirclePageIndicator;
 import com.blue.sky.control.CirclePageIndicator.LastPageSlidingListener;
-import com.blue.sky.web.api.webview.WebViewTabActivity;
 
 /**
  * 引导界面
@@ -116,7 +115,7 @@ public class GuideActivity extends Activity implements OnClickListener {
 		}
 
 		Intent intent = new Intent();
-		intent.setClass(GuideActivity.this, WebViewTabActivity.class);
+		intent.setClass(GuideActivity.this, MainActivity.class);
 		startActivity(intent);
 		finish();
 	}
