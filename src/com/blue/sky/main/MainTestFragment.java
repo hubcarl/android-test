@@ -41,6 +41,16 @@ public class MainTestFragment extends Fragment {
             }
         });
 
+        TextView pullRefresh = (TextView)rootView.findViewById(R.id.pull_refresh);
+        pullRefresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),com.blue.sky.test.pullrefresh.LauncherActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
         return rootView;
     }
 }

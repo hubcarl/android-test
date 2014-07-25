@@ -39,6 +39,50 @@
         <activity android:name="com.blue.sky.tab.navigation.MainActivity" >
         </activity>
         <activity
+                android:name="com.blue.sky.test.pullrefresh.LauncherActivity"
+                android:label="Main ListView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshListActivity"
+                android:label="PtR ListView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshListFragmentActivity"
+                android:label="PtR ListView Fragment" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshListInViewPagerActivity"
+                android:label="PtR ListView in ViewPager" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshGridActivity"
+                android:label="PtR GridView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshExpandableListActivity"
+                android:label="PtR ExpandableListView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshWebViewActivity"
+                android:label="PtR WebView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshScrollViewActivity"
+                android:label="PtR ScrollView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshHorizontalScrollViewActivity"
+                android:label="PtR HorizontalScrollView" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshViewPagerActivity"
+                android:label="PtR ViewPager" >
+        </activity>
+        <activity
+                android:name="com.blue.sky.test.pullrefresh.PullToRefreshWebView2Activity"
+                android:label="PtR WebView Advanced" >
+        </activity>
+        <activity
             android:name="com.blue.sky.message.ApkManagerActivity"
             android:label="@string/title_activity_apk_manager" >
         </activity>
